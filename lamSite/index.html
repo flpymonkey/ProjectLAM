@@ -23,6 +23,9 @@
     <link href="../../../Templates/templatemo_411_dragonfruit/css/bootstrap.min.css" rel="stylesheet">
     <!-- Template  -->
     <link href="../../../Templates/templatemo_411_dragonfruit/css/templatemo_style.css" rel="stylesheet">
+    
+    <!-- Mail Chimp pop up form. Adjust for new mail chimp account when needed. -->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us14.list-manage.com","uuid":"8bd097144c43f716ba655bea2","lid":"f99f6f63da"}) })</script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,7 +79,7 @@
             <div class="col-xs-4 templatemo_logo">
             	<a href="#">
           
-                	<h1 id="logo_text">Compounding<span>Pharmacy</span></h1>
+                	<h1 id="logo_text">AustinCompounding<span>Pharmacy</span></h1>
                 </a>
             </div>
             <div class="col-sm-8 hidden-xs">
@@ -329,11 +332,6 @@
                 </li>
            </ul>
         </div>
-      <?php
-$action=$_REQUEST['action'];
-if ($action=="")    /* display the contact form */
-    {
-    ?>
     <form  action="" method="POST" enctype="multipart/form-data" class="col-md-8">
     <div class="row">
                 <div class="col-md-12">
@@ -357,25 +355,7 @@ if ($action=="")    /* display the contact form */
                 </div>
     </div>
     </form>
-    <?php
-    } 
-else                /* send the submitted data */
-    {
-    $name=$_REQUEST['name'];
-    $email=$_REQUEST['email'];
-    $message=$_REQUEST['message'];
-    if (($name=="")||($email=="")||($message==""))
-        {
-		echo "All fields are required, please fill <a href=\"\">the form</a> again.";
-	    }
-    else{		
-	    $from="From: $name<$email>\r\nReturn-path: $email";
-        $subject="Message sent using your contact form";
-		mail("youremail@yoursite.com", $subject, $message, $from);
-		echo "Email sent!";
-	    }
-    }  
-?>
+    
     </div>
 </div>
 <div id="templatemo_footer">

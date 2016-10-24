@@ -1,0 +1,18 @@
+localhost:8080
+
+# cra=eate markdowns to specific css and js elements 
+markdown /css {
+	css /bootstrap.min.css 
+	css /camera.css 
+	css /font-awesome.min.css 
+	css /templatemo_style.css
+}
+
+markdown /js {
+	js /bootstrap.min.js
+	js /jquery.min.js
+	js /jquery.singlePageNav.min.js
+	js /jquery-ui.min.js
+	js /templatemo_script.js
+	js /unslider.min.js
+}
