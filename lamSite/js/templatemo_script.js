@@ -15,12 +15,12 @@ jQuery(function(){
     //main menu
     $("#templatemo_banner_menu ul").singlePageNav({offset: $('#templatemo_banner_menu').outerHeight()});
     //banner slide
-    $('.banner').unslider({ fluid: true, speed: 800, delay: 2000 });
+    $('.banner').unslider({ fluid: true, speed: 1000, delay: 2000 });
 	$(".banner").click(function(){
         $.current_testimonial.effect("fade",{},200,function(){
 			// need to add click functionality to header!
 			/*.unslider({ fluid: true, speed: 800, delay: 2000 });*/
-            $.current_testimonial_next = ($.current_testimonial.index() == $(".testimonial_text").last().index() ) ? $(".testimonial_text").first() : $.current_testimonial.next() ;
+            $.current_testimonial_next = ($.current_testimonial.index() === $(".testimonial_text").last().index() ) ? $(".testimonial_text").first() : $.current_testimonial.next() ;
             $.current_testimonial_next.fadeIn();
             $.current_testimonial = $.current_testimonial_next;
         });

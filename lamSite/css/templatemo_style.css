@@ -121,7 +121,7 @@ h1 {
     width: 100%;
 }
 .banner div.slide_caption {
-	background: rgba(0, 0, 0, 0.0);
+	background: rgba(0, 0, 0, 0.4);
     max-width: 600px;
     margin: 120px auto auto auto;
 }
